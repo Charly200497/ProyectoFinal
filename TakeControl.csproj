@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68724D58-8FBD-4451-A201-396817F1CBC6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TakeControl</RootNamespace>
+    <AssemblyName>TakeControl</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Frames\Usuarios\ConsultaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Usuarios\ConsultaUsuarios.Designer.cs">
+      <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Productos\AltaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Productos\AltaProductos.Designer.cs">
+      <DependentUpon>AltaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Productos\BajaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Productos\BajaProductos.Designer.cs">
+      <DependentUpon>BajaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Productos\ModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Productos\ModificarProducto.Designer.cs">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\ListadoAlertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\ListadoAlertas.Designer.cs">
+      <DependentUpon>ListadoAlertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Mermas\Mermas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Mermas\Mermas.Designer.cs">
+      <DependentUpon>Mermas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Productos\ConsultarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Productos\ConsultarProducto.Designer.cs">
+      <DependentUpon>ConsultarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\EntradaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\EntradaProducto.Designer.cs">
+      <DependentUpon>EntradaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\SalidaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\SalidaProducto.Designer.cs">
+      <DependentUpon>SalidaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\ConfiguracionAlertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\ConfiguracionAlertas.Designer.cs">
+      <DependentUpon>ConfiguracionAlertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Entradas_Salidas\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Herramientas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Herramientas.Designer.cs">
+      <DependentUpon>Herramientas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Usuarios\AltasDeUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Usuarios\AltasDeUsuario.Designer.cs">
+      <DependentUpon>AltasDeUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Usuarios\BajasDeUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Usuarios\BajasDeUsuario.Designer.cs">
+      <DependentUpon>BajasDeUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Usuarios\ModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Usuarios\ModificarUsuario.Designer.cs">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\RecuperarContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\RecuperarContrasena.Designer.cs">
+      <DependentUpon>RecuperarContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frames\Usuarios\ConsultaUsuarios.resx">
+      <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Productos\AltaProductos.resx">
+      <DependentUpon>AltaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Productos\BajaProductos.resx">
+      <DependentUpon>BajaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Productos\ModificarProducto.resx">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Entradas_Salidas\ListadoAlertas.resx">
+      <DependentUpon>ListadoAlertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Mermas\Mermas.resx">
+      <DependentUpon>Mermas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Productos\ConsultarProducto.resx">
+      <DependentUpon>ConsultarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Entradas_Salidas\EntradaProducto.resx">
+      <DependentUpon>EntradaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Entradas_Salidas\SalidaProducto.resx">
+      <DependentUpon>SalidaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Entradas_Salidas\ConfiguracionAlertas.resx">
+      <DependentUpon>ConfiguracionAlertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Entradas_Salidas\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Herramientas.resx">
+      <DependentUpon>Herramientas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Usuarios\AltasDeUsuario.resx">
+      <DependentUpon>AltasDeUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Usuarios\BajasDeUsuario.resx">
+      <DependentUpon>BajasDeUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Usuarios\ModificarUsuario.resx">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\RecuperarContrasena.resx">
+      <DependentUpon>RecuperarContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BD_icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_ipn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_tk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MORADO.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
