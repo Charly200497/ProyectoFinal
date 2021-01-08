@@ -36,6 +36,12 @@ namespace TakeControl
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_daralta = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_identificador = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -64,14 +70,14 @@ namespace TakeControl
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(491, 179);
+            this.label3.Location = new System.Drawing.Point(385, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 33);
+            this.label3.Size = new System.Drawing.Size(334, 33);
             this.label3.TabIndex = 4;
-            this.label3.Text = "LOG-IN";
+            this.label3.Text = "ALTA DE PRODUCTOS";
             // 
             // pictureBox2
             // 
@@ -95,18 +101,84 @@ namespace TakeControl
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.pictureBox4.Location = new System.Drawing.Point(280, 162);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(540, 50);
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
+            // btn_regresar
+            // 
+            this.btn_regresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_regresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_regresar.ForeColor = System.Drawing.Color.White;
+            this.btn_regresar.Location = new System.Drawing.Point(12, 580);
+            this.btn_regresar.Name = "btn_regresar";
+            this.btn_regresar.Size = new System.Drawing.Size(134, 44);
+            this.btn_regresar.TabIndex = 14;
+            this.btn_regresar.Text = "REGRESAR";
+            this.btn_regresar.UseVisualStyleBackColor = false;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            // 
+            // btn_daralta
+            // 
+            this.btn_daralta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_daralta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_daralta.ForeColor = System.Drawing.Color.White;
+            this.btn_daralta.Location = new System.Drawing.Point(424, 580);
+            this.btn_daralta.Name = "btn_daralta";
+            this.btn_daralta.Size = new System.Drawing.Size(259, 44);
+            this.btn_daralta.TabIndex = 3;
+            this.btn_daralta.Text = "DAR DE ALTA";
+            this.btn_daralta.UseVisualStyleBackColor = false;
+            this.btn_daralta.Click += new System.EventHandler(this.btn_daralta_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(353, 358);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 22);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Identificador";
+            // 
+            // txt_identificador
+            // 
+            this.txt_identificador.Location = new System.Drawing.Point(535, 358);
+            this.txt_identificador.Name = "txt_identificador";
+            this.txt_identificador.Size = new System.Drawing.Size(241, 20);
+            this.txt_identificador.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(376, 410);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 22);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Nombre";
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(535, 410);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(241, 20);
+            this.txt_nombre.TabIndex = 2;
+            // 
             // AltaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 636);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txt_nombre);
+            this.Controls.Add(this.btn_regresar);
+            this.Controls.Add(this.btn_daralta);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt_identificador);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -118,7 +190,7 @@ namespace TakeControl
             this.MaximizeBox = false;
             this.Name = "AltaProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Take Control - LogIn";
+            this.Text = "Take Control - Alta de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -135,6 +207,12 @@ namespace TakeControl
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btn_regresar;
+        private System.Windows.Forms.Button btn_daralta;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_identificador;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_nombre;
     }
 }
 

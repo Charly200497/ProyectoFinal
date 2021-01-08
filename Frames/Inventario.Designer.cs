@@ -36,9 +36,13 @@ namespace TakeControl
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.DataGridViewInventario = new System.Windows.Forms.DataGridView();
+            this.btn_salir = new System.Windows.Forms.Button();
+            this.btn_herramientas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewInventario)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,11 +71,11 @@ namespace TakeControl
             this.label3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(491, 179);
+            this.label3.Location = new System.Drawing.Point(475, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 33);
+            this.label3.Size = new System.Drawing.Size(199, 33);
             this.label3.TabIndex = 4;
-            this.label3.Text = "LOG-IN";
+            this.label3.Text = "INVENTARIO";
             // 
             // pictureBox2
             // 
@@ -102,11 +106,48 @@ namespace TakeControl
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
-            // LogIn
+            // DataGridViewInventario
+            // 
+            this.DataGridViewInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridViewInventario.Location = new System.Drawing.Point(280, 233);
+            this.DataGridViewInventario.Name = "DataGridViewInventario";
+            this.DataGridViewInventario.Size = new System.Drawing.Size(540, 320);
+            this.DataGridViewInventario.TabIndex = 19;
+            // 
+            // btn_salir
+            // 
+            this.btn_salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.ForeColor = System.Drawing.Color.White;
+            this.btn_salir.Location = new System.Drawing.Point(12, 580);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(134, 44);
+            this.btn_salir.TabIndex = 21;
+            this.btn_salir.Text = "SALIR";
+            this.btn_salir.UseVisualStyleBackColor = false;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
+            // btn_herramientas
+            // 
+            this.btn_herramientas.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btn_herramientas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_herramientas.ForeColor = System.Drawing.Color.White;
+            this.btn_herramientas.Location = new System.Drawing.Point(460, 580);
+            this.btn_herramientas.Name = "btn_herramientas";
+            this.btn_herramientas.Size = new System.Drawing.Size(196, 44);
+            this.btn_herramientas.TabIndex = 23;
+            this.btn_herramientas.Text = "HERRAMIENTAS";
+            this.btn_herramientas.UseVisualStyleBackColor = false;
+            this.btn_herramientas.Click += new System.EventHandler(this.btn_herramientas_Click);
+            // 
+            // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 636);
+            this.Controls.Add(this.btn_herramientas);
+            this.Controls.Add(this.btn_salir);
+            this.Controls.Add(this.DataGridViewInventario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -116,12 +157,14 @@ namespace TakeControl
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "LogIn";
+            this.Name = "Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Take Control - LogIn";
+            this.Text = "Take Control - Inventario";
+            this.Load += new System.EventHandler(this.Inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +178,9 @@ namespace TakeControl
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.DataGridView DataGridViewInventario;
+        private System.Windows.Forms.Button btn_salir;
+        private System.Windows.Forms.Button btn_herramientas;
     }
 }
 

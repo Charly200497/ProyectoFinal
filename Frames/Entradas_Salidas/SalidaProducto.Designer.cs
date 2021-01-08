@@ -36,6 +36,14 @@ namespace TakeControl
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_darsalida = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_identficador = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_unidades = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_preciounidad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -64,14 +72,14 @@ namespace TakeControl
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(491, 179);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(378, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 33);
+            this.label3.Size = new System.Drawing.Size(343, 33);
             this.label3.TabIndex = 4;
-            this.label3.Text = "LOG-IN";
+            this.label3.Text = "SALIDA DE PRODCTOS";
             // 
             // pictureBox2
             // 
@@ -95,18 +103,103 @@ namespace TakeControl
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pictureBox4.Location = new System.Drawing.Point(280, 162);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(540, 50);
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
-            // LogIn
+            // btn_regresar
+            // 
+            this.btn_regresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_regresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_regresar.ForeColor = System.Drawing.Color.White;
+            this.btn_regresar.Location = new System.Drawing.Point(12, 580);
+            this.btn_regresar.Name = "btn_regresar";
+            this.btn_regresar.Size = new System.Drawing.Size(134, 44);
+            this.btn_regresar.TabIndex = 14;
+            this.btn_regresar.Text = "REGRESAR";
+            this.btn_regresar.UseVisualStyleBackColor = false;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            // 
+            // btn_darsalida
+            // 
+            this.btn_darsalida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_darsalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_darsalida.ForeColor = System.Drawing.Color.Black;
+            this.btn_darsalida.Location = new System.Drawing.Point(424, 580);
+            this.btn_darsalida.Name = "btn_darsalida";
+            this.btn_darsalida.Size = new System.Drawing.Size(259, 44);
+            this.btn_darsalida.TabIndex = 4;
+            this.btn_darsalida.Text = "DAR SALIDA";
+            this.btn_darsalida.UseVisualStyleBackColor = false;
+            this.btn_darsalida.Click += new System.EventHandler(this.btn_darsalida_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(347, 327);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 22);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Identificador";
+            // 
+            // txt_identficador
+            // 
+            this.txt_identficador.Location = new System.Drawing.Point(529, 327);
+            this.txt_identficador.Name = "txt_identficador";
+            this.txt_identficador.Size = new System.Drawing.Size(241, 20);
+            this.txt_identficador.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(366, 370);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 22);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Unidades";
+            // 
+            // txt_unidades
+            // 
+            this.txt_unidades.Location = new System.Drawing.Point(529, 370);
+            this.txt_unidades.Name = "txt_unidades";
+            this.txt_unidades.Size = new System.Drawing.Size(241, 20);
+            this.txt_unidades.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(347, 417);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 22);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Precio/Unidad";
+            // 
+            // txt_preciounidad
+            // 
+            this.txt_preciounidad.Location = new System.Drawing.Point(529, 417);
+            this.txt_preciounidad.Name = "txt_preciounidad";
+            this.txt_preciounidad.Size = new System.Drawing.Size(241, 20);
+            this.txt_preciounidad.TabIndex = 3;
+            // 
+            // SalidaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 636);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_preciounidad);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txt_unidades);
+            this.Controls.Add(this.btn_regresar);
+            this.Controls.Add(this.btn_darsalida);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt_identficador);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -116,9 +209,9 @@ namespace TakeControl
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "LogIn";
+            this.Name = "SalidaProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Take Control - LogIn";
+            this.Text = "Take Control - Salida de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -135,6 +228,14 @@ namespace TakeControl
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btn_regresar;
+        private System.Windows.Forms.Button btn_darsalida;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_identficador;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_unidades;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_preciounidad;
     }
 }
 

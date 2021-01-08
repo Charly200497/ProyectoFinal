@@ -7,14 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TakeControl.Datos;
 
 namespace TakeControl
 {
     public partial class ConsultaUsuarios : Form
     {
-        public ConsultaUsuarios()
+        public ConectaBD cbd = new ConectaBD();
+        DataTable dt = new DataTable();
+        
+        public ConsultaUsuarios(String TipoUser)
         {
             InitializeComponent();
+            GTipoUser = TipoUser;
+            //MessageBox.Show("TipoUsuario" + GTipoUser);
+
+            String CadenaTipUser = cbd.RegresaDatosPrimariosSP(2, TipoUser, "", "");
+            Int16 RolUSer = Int16.Parse(CadenaTipUser);
+            dt = cbd.ImprimeTablas(2, RolUSer);
+            DataGridUsuarios.DataSource = dt;
+        }
+        String GTipoUser = "";
+
+        private void btn_regresar_Click(object sender, EventArgs e)
+        {
+            Herramientas herramientas = new Herramientas(GTipoUser);
+            herramientas.Show();
+            this.Close();
         }
     }
 }
